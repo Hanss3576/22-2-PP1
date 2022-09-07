@@ -4,6 +4,15 @@ public class Word {
     private int id;
     int level;
     String word;
+    String mean;
+    @Override
+    public String toString() {
+        String slevel = "";
+        for(int i =0; i<level; i++) slevel += "*";
+        String str = String.format("%-3s", slevel)
+                + String.format("%15s", word) + " " + mean;
+        return str;
+    }
 
     public Word(int id, int level, String word, String mean) {
         this.id = id;
@@ -15,7 +24,7 @@ public class Word {
     public Word() {
     }
 
-    String mean;
+
 
     public void setId(int id) {
         this.id = id;
