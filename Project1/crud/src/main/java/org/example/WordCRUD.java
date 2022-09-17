@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class WordCRUD implements ICRUD{
@@ -16,15 +15,15 @@ public class WordCRUD implements ICRUD{
 
     @Override
     public Object add() {
-        System.out.println("=> 난이도(1-2-3) & 단어 입력 : ");
+        System.out.print("=> 난이도(1-2-3) & 단어 입력 :  ");
         int level = s.nextInt();
         String word = s.nextLine();
-        System.out.println("뜻 => ");
+        System.out.print("뜻 =>  ");
         String m = s.nextLine();
 
         return new Word(0, level, word, m);
     }
-    public void addWord(){
+    public void addItem(){
         Word one = (Word)add();
         list.add(one);
         System.out.println("추가되었습니다 \n");
@@ -75,7 +74,6 @@ public class WordCRUD implements ICRUD{
         return idlist;
     }
     public void updateItem() {
-
         if(list.isEmpty()){
             System.out.println("----- 현재 추가된 단어가 없습니다 -----\n");
             return;
@@ -86,14 +84,40 @@ public class WordCRUD implements ICRUD{
         ArrayList<Integer> idlist = this.listAll(keyword);
 
 
-        System.out.println("=> 수정할 단어의 번호");
+        System.out.print("=> 수정할 단어의 번호  :  ");
         int id = s.nextInt();
         s.nextLine();
 
-        System.out.println("=> 뜻 수정 : ");
+        System.out.print("=> 뜻 수정  : ");
         String mean = s.nextLine();
         Word word = list.get(idlist.get(id-1));
         word.setMean(mean);
         System.out.println("단어가 수정되었습니다.");
+    }
+
+    public void deleteItem() {
+        if(list.isEmpty()){
+            System.out.println("----- 현재 삭제할 단어가 없습니다 -----\n");
+            return;
+        }
+
+        System.out.println("=> 삭제할 단어 검색 : ");
+        String keyword = s.next();
+        ArrayList<Integer> idlist = this.listAll(keyword);
+
+
+        System.out.print("=> 삭제할 단어의 번호  :  ");
+        int id = s.nextInt();
+        s.nextLine();
+
+        System.out.print("=> 정말로 삭제하시겠습니까? (Y/n)  : ");
+        String ans = s.next();
+        if(ans.equalsIgnoreCase("y")) {
+            list.remove((int)idlist.get(id-1));
+            System.out.println("단어가 삭제되었습니다.");
+        }
+        else{
+            System.out.println("취소되었습니다. ");
+        }
     }
 }
