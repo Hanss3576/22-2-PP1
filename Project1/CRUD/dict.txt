@@ -1,0 +1,4 @@
+1|gather|모으다
+2|prescription|처방,처방전
+2|arbitrary|임의의,멋대로의
+3|sanitation|위생
