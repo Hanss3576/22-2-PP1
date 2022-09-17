@@ -3,3 +3,4 @@
 2|equipment|장비, 용품
 1|formerly|이전에, 예전에
 2| extremely|극도로, 매우 많이
+1| kiwi|키위
