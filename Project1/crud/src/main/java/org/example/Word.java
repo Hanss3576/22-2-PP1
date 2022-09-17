@@ -5,6 +5,7 @@ public class Word {
     int level;
     String word;
     String mean;
+
     @Override
     public String toString() {
         String slevel = "";
