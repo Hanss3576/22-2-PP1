@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class WordCRUD implements ICRUD{
@@ -50,5 +51,34 @@ public class WordCRUD implements ICRUD{
             System.out.println(list.get(i).toString());
         }
         System.out.println("--------------------");
+    }
+
+    public ArrayList<Integer> listAll(String keyword){
+        ArrayList<Integer> idlist = new ArrayList<>();
+        int j =0;
+        System.out.println("--------------------");
+        for(int i =0; i< list.size(); i++){
+            String word = list.get(i).getWord();
+            if(!word.contains(keyword)) continue;
+
+            System.out.print((i+1) + " ");
+            System.out.println(list.get(j).toString());
+            idlist.add(i);
+            j++;
+        }
+        System.out.println("--------------------");
+        return idlist;
+    }
+    public void updateItem() {
+        System.out.println("=> 수정할 단어 검색 : ");
+        String keyword = s.next();
+        ArrayList<Integer> idlist = this.listAll(keyword);
+        System.out.println("=> 수정할 단어의 번호");
+        int id = s.nextInt();
+        System.out.println("=> 뜻 수정 : ");
+        String mean = s.nextLine();
+        Word word = list.get(idlist.get(id-1));
+        word.setMean(mean);
+        System.out.println("단어가 수정되었습니다.");
     }
 }
