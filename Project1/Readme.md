@@ -1,4 +1,12 @@
 # Project1 - 영어단어장 만들기
 
+### 실행화면
+Create :  [4.단어 추가] <br>
+<img src="./screenshot/create1.png" width="200" height="300"/>
+<img src="./screenshot/create2.png" width="200" height="300"/>
 
-<img scr="./screenshot/스크린샷%202022-09-07%20오후%2011.10.34.png">
+Read :  [1.모든 단어 보기] <br>
+<img src="./screenshot/read.png" width="300" height="400"/>
+
+Exit :  [0.나가기] <br>
+<img src="./screenshot/exit.png" width="300" height="400"/>
