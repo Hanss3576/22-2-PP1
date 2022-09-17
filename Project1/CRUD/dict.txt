@@ -1,4 +1,5 @@
-1|gather|모으다
-2|prescription|처방,처방전
-2|arbitrary|임의의,멋대로의
-3|sanitation|위생
+3|superintendent|관리자, 감독관
+1|electric|전기의, 전기를 생산하는
+2|equipment|장비, 용품
+1|pole|기동, 장대
+1|formerly|이전에, 예전에
