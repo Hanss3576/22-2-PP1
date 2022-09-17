@@ -45,6 +45,10 @@ public class WordCRUD implements ICRUD{
     }
 
     public void listAll(){
+        if(list.isEmpty()){
+            System.out.println("----- 현재 추가된 단어가 없습니다 -----\n");
+            return;
+        }
         System.out.println("--------------------");
         for(int i =0; i< list.size(); i++){
             System.out.print((i+1) + " ");
@@ -54,6 +58,7 @@ public class WordCRUD implements ICRUD{
     }
 
     public ArrayList<Integer> listAll(String keyword){
+
         ArrayList<Integer> idlist = new ArrayList<>();
         int j =0;
         System.out.println("--------------------");
@@ -70,11 +75,21 @@ public class WordCRUD implements ICRUD{
         return idlist;
     }
     public void updateItem() {
+
+        if(list.isEmpty()){
+            System.out.println("----- 현재 추가된 단어가 없습니다 -----\n");
+            return;
+        }
+
         System.out.println("=> 수정할 단어 검색 : ");
         String keyword = s.next();
         ArrayList<Integer> idlist = this.listAll(keyword);
+
+
         System.out.println("=> 수정할 단어의 번호");
         int id = s.nextInt();
+        s.nextLine();
+
         System.out.println("=> 뜻 수정 : ");
         String mean = s.nextLine();
         Word word = list.get(idlist.get(id-1));
