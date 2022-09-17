@@ -41,7 +41,7 @@ public class WordManager {
        }
     }
     public int selectMenu(){
-        System.out.println(" **** Word Master **** \n"+
+        System.out.print(" **** Word Master **** \n"+
                 "-------------------\n"+
                 "1. 모든 단어 보기\t\t"+"5. 단어 수정\n"+
                 "2. 수준별 단어 보기\t\t"+"6. 단어 삭제\n"+
