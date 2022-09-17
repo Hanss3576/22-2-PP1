@@ -22,7 +22,9 @@ Delete : [6. 단어삭제] <br>
 <img src="./screenshot/wordSearch.png" width="300" height="400"/>
 ---
 FileIO : [7. 파일저장] <br>
-
+<img src="./screenshot/saveFile_1.png" width="300" height="400"/>
+<img src="./screenshot/saveFile_2.png" width="300" height="400"/>
+<img src="./screenshot/saveFile_result.png" width="300" height="400"/>
 ---
 Exit :  [0.나가기] <br>
 <img src="./screenshot/exit.png" width="300" height="400"/>
