@@ -22,7 +22,7 @@ Delete : [6. 단어삭제] <br>
 ---
 [5. 단어수정] <br>
 <img src="./screenshot/WordUpdate.png" width="300" height="400"/>
-<img src="./screenshot/update_result" width="300" height="400"/>
+<img src="https://github.com/Hanss3576/22-2-PP1/blob/main/Project1/screenshot/update_result.png" width="300" height="400"/>
 ---
 FileIO : [7. 파일저장] <br>
 <img src="./screenshot/saveFile_1.png" width="300" height="400"/>
